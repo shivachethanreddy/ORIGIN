@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#live-preview {
+  scroll-margin-top: 7rem;
+}
+
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
+html,
+body {
+  overflow-y: auto;
+}
+
+body {
+  margin: 0;
+  background: #030303;
+  color: #f8fafc;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.sandpack-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sandpack-shell .sp-wrapper,
+.sandpack-shell .sp-layout,
+.sandpack-shell .sp-stack,
+.sandpack-shell .sandpack-preview-frame,
+.sandpack-shell .sp-preview,
+.sandpack-shell .sp-preview-container {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #050505;
+}
+
+.sandpack-shell .sp-layout {
+  min-height: 0;
+}
+
+.sandpack-shell .sp-preview-iframe,
+.sandpack-shell iframe {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  background: #ffffff;
+}
+
+.cosmic-grid {
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.10), transparent 34%),
+    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.08), transparent 28%),
+    radial-gradient(circle at 24% 48%, rgba(255, 255, 255, 0.055), transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px),
+    #030303;
+  background-size: auto, auto, auto, 72px 72px, 72px 72px, auto;
+  animation: gridDrift 18s linear infinite;
+}
+
+.cosmic-grid::before {
+  content: "1010  C0DE  APP  JSX  UI  STATE  REACT  AGENT  0101  FLOW  JSON  LIVE";
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  color: rgba(148, 163, 184, 0.055);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  letter-spacing: 18px;
+  line-height: 38px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  transform: scale(1.05);
+}
+
+.cosmic-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.75) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.55) 0 1px, transparent 1.8px);
+  background-position: 0 0, 60px 40px;
+  background-size: 140px 140px, 220px 220px;
+  opacity: 0.18;
+  mask-image: radial-gradient(circle at center, black, transparent 74%);
+}
+
+.mesh-field {
+  pointer-events: none;
+  opacity: 0.72;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.16), transparent 24%),
+    radial-gradient(circle at 78% 16%, rgba(255, 255, 255, 0.11), transparent 26%),
+    radial-gradient(circle at 62% 72%, rgba(255, 255, 255, 0.08), transparent 26%),
+    radial-gradient(circle at 30% 82%, rgba(255, 255, 255, 0.07), transparent 26%);
+  filter: blur(8px);
+  animation: meshFloat 12s ease-in-out infinite alternate;
+}
+
+.particle-field {
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.72) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.58) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.36) 0 1px, transparent 1.8px);
+  background-position: 20px 30px, 80px 120px, 150px 60px;
+  background-size: 180px 180px, 260px 260px, 340px 340px;
+  opacity: 0.16;
+  animation: particleDrift 24s linear infinite;
+  mask-image: linear-gradient(to bottom, black, black 72%, transparent);
+}
+
+.hologram-text {
+  background: linear-gradient(92deg, #ffffff 0%, #d4d4d8 28%, #ffffff 54%, #a1a1aa 78%, #ffffff 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 44px rgba(255, 255, 255, 0.14);
+  animation: hologramShift 6s ease-in-out infinite;
+}
+
+.glass-command::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: 29px;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent 28%, rgba(255, 255, 255, 0.08) 52%, transparent 72%);
+  opacity: 0.7;
+}
+
+.animated-border {
+  position: absolute;
+  inset: -1px;
+  border-radius: 31px;
+  padding: 1px;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.52), rgba(160, 160, 160, 0.36), rgba(255, 255, 255, 0));
+  opacity: 0.42;
+  animation: borderSweep 5s linear infinite;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.premium-button {
+  background: linear-gradient(135deg, #ffffff, #d4d4d8 48%, #8a8a8a 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.22) inset,
+    0 0 34px rgba(255, 255, 255, 0.22),
+    0 16px 38px rgba(15, 23, 42, 0.36);
+}
+
+.premium-button:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.36) inset,
+    0 0 46px rgba(255, 255, 255, 0.32),
+    0 20px 46px rgba(15, 23, 42, 0.44);
+}
+
+.agent-sweep {
+  animation: agentSweep 2.4s ease-in-out infinite;
+}
+
+.scanlines {
+  background: linear-gradient(to bottom, transparent 0, rgba(255, 255, 255, 0.035) 1px, transparent 3px);
+  background-size: 100% 9px;
+  opacity: 0.34;
+}
+
+@keyframes gridDrift {
+  from {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  to {
+    background-position: 0 0, 0 0, 0 0, 72px 72px, 72px 72px, 0 0;
+  }
+}
+
+@keyframes meshFloat {
+  from {
+    transform: translate3d(-1%, -1%, 0) scale(1);
+  }
+  to {
+    transform: translate3d(1.5%, 1%, 0) scale(1.04);
+  }
+}
+
+@keyframes particleDrift {
+  from {
+    background-position: 20px 30px, 80px 120px, 150px 60px;
+  }
+  to {
+    background-position: 180px 240px, 20px 300px, 300px 20px;
+  }
+}
+
+@keyframes hologramShift {
+  0%,
+  100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+}
+
+@keyframes borderSweep {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes agentSweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  55%,
+  100% {
+    transform: translateX(360%);
+  }
+}

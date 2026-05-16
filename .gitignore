@@ -1,0 +1,47 @@
+# dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# next.js
+.next/
+out/
+
+# production
+build/
+dist/
+
+# env (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# debug / logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dev-server.log
+*.log
+
+# tooling caches
+.corepack/
+.turbo/
+.vercel/
+.eslintcache
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# test / misc
+coverage/
+*.tsbuildinfo
+scripts/test-*.mjs
+scripts/fix-*.py
+*.zip
+src.zip
