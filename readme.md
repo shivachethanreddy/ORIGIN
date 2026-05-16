@@ -6,7 +6,7 @@
 
 ---
 
-## Slide 1 — Title
+##  Title
 
 **ORIGIN — AI Code Co-Pilot for Non-Coders**
 
@@ -16,7 +16,7 @@
 
 ---
 
-## Slide 2 — Problem
+## Problem
 
 | Pain point | Who feels it |
 |------------|--------------|
@@ -28,7 +28,7 @@
 
 ---
 
-## Slide 3 — Solution
+## Solution
 
 **ORIGIN** accepts a natural-language prompt and returns:
 
@@ -44,7 +44,7 @@
 
 ---
 
-## Slide 4 — How It Works (User Flow)
+## S How It Works (User Flow)
 
 ```
 User types prompt
@@ -65,7 +65,7 @@ User types prompt
 
 ---
 
-## Slide 5 — Tech Stack
+##Tech Stack
 
 | Layer | Technology | Role |
 |-------|------------|------|
@@ -87,7 +87,7 @@ User types prompt
 
 ---
 
-## Slide 6 — Architecture (Multi-Agent Pipeline)
+##Architecture (Multi-Agent Pipeline)
 
 ```mermaid
 flowchart LR
@@ -118,7 +118,7 @@ flowchart LR
 
 ---
 
-## Slide 7 — Key Features
+## Key Features
 
 1. **Natural-language app generation**
 2. **Live Sandpack preview** + optional code view
@@ -131,7 +131,7 @@ flowchart LR
 
 ---
 
-## Slide 8 — Use Cases
+##Use Cases
 
 | Segment | Use case | Value |
 |---------|----------|--------|
@@ -144,42 +144,7 @@ flowchart LR
 
 **Supported app types (examples):** calculators, dashboards, todo/habit trackers, grading tools, CRM-style UIs, inventory, budgets — anything expressible as a **single React component**.
 
----
 
-## Slide 9 — Feasibility
-
-| Factor | Assessment |
-|--------|------------|
-| **Technical** | High — proven stack (Next.js + OpenAI + Sandpack) |
-| **Scope** | Bounded — one-file React apps, no backend generation |
-| **Time (hackathon)** | MVP working — create, preview, update |
-| **Cost** | Low for demo — `gpt-4o-mini` or Groq free tier |
-| **Risk** | LLM output quality varies; sanitization + fallbacks mitigate |
-
-**Why it’s feasible:**
-
-- Agents are sequential prompts, not a custom ML pipeline
-- Sandpack removes “run locally” friction
-- Intent router reduces unnecessary full rebuilds
-
----
-
-## Slide 10 — Viability
-
-| Strength | Weakness |
-|----------|----------|
-| Large market (no-code + AI coding) | Crowded space (v0, Bolt, Lovable, etc.) |
-| Clear wedge: non-coders + instant preview | Single-file limit for real products |
-| Low infra cost for MVP | Depends on third-party LLM pricing |
-| Strong for education & prototyping | Not production deployment yet |
-
-**Possible business models (if extended):**
-
-- Freemium: N generations per month
-- Teams: shared projects + export to GitHub
-- Education: classroom licenses
-
-**Verdict:** Strong **demo + learning product** for hackathons; needs a product roadmap for commercial use.
 
 ---
 
@@ -197,7 +162,7 @@ flowchart LR
 
 ---
 
-## Slide 12 — Limitations
+##Limitations
 
 - One **self-contained** `App.js` — not multi-page apps or real APIs
 - No persistent **cloud database** or user accounts in generated apps
@@ -207,7 +172,7 @@ flowchart LR
 
 ---
 
-## Slide 13 — Future Improvements
+##   Future Improvements
 
 ### Short term
 
@@ -244,7 +209,7 @@ flowchart LR
 
 ---
 
-## Slide 15 — Demo Script (2–3 minutes)
+##  Demo Script (2–3 minutes)
 
 1. Open app → **ORIGIN** splash screen
 2. Prompt: *“Build a BMI calculator with height, weight, and category result”* → **Generate App**
@@ -252,14 +217,6 @@ flowchart LR
 4. Prompt: *“Add dark mode and a reset button”* → **update mode**
 5. Prompt: *“Build a student grade dashboard instead”* → **rebuild**
 6. Optional: open **full preview** tab or toggle **code view**
-
----
-
-## Slide 16 — Closing
-
-**What we built:** A hackathon MVP for controlled, component-level React generation with live Sandpack preview and a multi-agent orchestrator.
-
-**Ask the audience:** Feedback on agent transparency, use cases in their domain, and which feature to build next.
 
 ---
 
